@@ -13,14 +13,14 @@
         >Inicio</a
       >
       <a
+        href="#projects"
+        class="hover:scale-110 transform transition duration-200 ease-in-out"
+        >Proyectos</a
+      >
+      <a
         href="#about"
         class="hover:scale-110 transform transition duration-200 ease-in-out"
         >¿Quién soy?</a
-      >
-      <a
-        href="#"
-        class="hover:scale-110 transform transition duration-200 ease-in-out"
-        >Proyectos</a
       >
       <a
         href="#"
@@ -79,14 +79,23 @@
     </div>
   </section>
 
-  <!-- QUIÉN SOY -->
-  <section id="about" class="h-screen flex justify-center items-center">
-    <div class="grid grid-cols-2 h-[240px]">
-      <!-- ¿Carrusel con fotos? -->
-      <div></div>
+  <!-- Proyectos -->
+  <section id="projects" class="h-screen flex items-center">
+    <div class="grid grid-cols-2 gap-32">
+      <div class="justify-self-start h-[164px]">
+        <h3 class="text-7xl font-bold">Proyectos</h3>
+        <p class="mt-5">*Todos los proyectos que se mencionan en este apartado se encuentran subidos en la plataforma GitHub</p>
+      </div>
 
-      <!-- TEXTO DE QUIÉN SOY -->
-      <div></div>
+      <div class="bg-[#D6C0B3] rounded-3xl h-[400px] flex flex-col justify-center items-center">
+        <a id="gitLink" href="https://github.com/Faprin/n-Queens" target="_blank" rel="noopener noreferrer">
+          <h4 id="projectName" class="font-bold text-2xl max-w-[380px] mt-4">Problema de las N-reinas</h4>
+        </a>
+        <p id="projectDescription" class="text-center max-w-[380px] mt-2">Este proyecto resuelve el problema de las N-Reinas utilizando una interfaz gráfica construida con JavaFX. El programa permite al usuario introducir el número de filas, columnas y reinas a través de la interfaz, y genera una solución utilizando el algoritmo de backtracking.</p>
+        
+          <span id="arrow" class="icon-[line-md--arrow-small-right] mt-16 text-3xl"></span>
+      </div>
+
     </div>
   </section>
 </main>
@@ -139,6 +148,38 @@
       }
       printLetter();
     }
+  }
+
+  const projectName = [
+    "Problema de las N-reinas",
+    "Algoritmos y Estructuras de Datos",
+  ];
+
+  const projectDescriptions = [
+    "Este proyecto resuelve el problema de las N-Reinas utilizando una interfaz gráfica construida con JavaFX. El programa permite al usuario introducir el número de filas, columnas y reinas a través de la interfaz, y genera una solución utilizando el algoritmo de backtracking.",
+    "La práctica consiste en realizar un programa en lenguaje Java con el que podamos resolver el famoso problema del viajante. Para ello, empleamos distintas estrategias algorítmicas y realizamos un estudio de cada uno de los algoritmos usados, verificando cuál resulta más eficiente y gasta menos tiempo computacional."
+  ]
+
+  const gitLinks = [
+    "https://github.com/Faprin/n-Queens",
+    "https://github.com/Faprin/Practica2_AMC"
+  ]
+
+  let indexProject = 0;
+  const arrow = document.getElementById("arrow");
+  const projectNameElement = document.getElementById("projectName");
+  const projectDescriptionElement = document.getElementById("projectDescription");
+  const gitLinkElement = document.getElementById("gitLink");
+  if(arrow != null) {
+    arrow.addEventListener("click", () => { 
+        indexProject = (indexProject + 1) % projectName.length;
+        if(projectNameElement != null && projectDescriptionElement != null && gitLinkElement != null) {
+          
+        projectNameElement.innerHTML = projectName[indexProject];
+        projectDescriptionElement.innerHTML = projectDescriptions[indexProject];
+        document.getElementById("gitLink").href = gitLinks[indexProject];
+        }
+    })
   }
 
   changeName();
