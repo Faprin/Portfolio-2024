@@ -115,8 +115,9 @@
   
   function generateProjects() {
     const content = document.getElementById("project-cont");
-    content.innerHTML = ""; // Asegura que esté vacío antes de agregar proyectos
-    
+    if(content != null)
+      content.innerHTML = "";
+
     projectsTitle.forEach((title, index) => {
       const isEven = index % 2 === 0;
       
@@ -131,10 +132,10 @@
             </div>
             <div id="column-2" class="flex">
               <div class="bg-[#493628] w-1 h-full mr-10"></div>
-              <img class="max-w-[50%]" src="${projectsImages[index]}" alt="${altImg[index]}" />
+              <img class="w-full max-w-[210px] object-contain" src="${projectsImages[index]}" alt="${altImg[index]}" />
             </div>`
           : `<div id="column-1" class="flex justify-end mr-10">
-              <img class="max-w-[50%]" src="${projectsImages[index]}" alt="${altImg[index]}" />
+              <img class="w-full max-w-[210px] object-contain" src="${projectsImages[index]}" alt="${altImg[index]}" />
             </div>
             <div class="flex">
               <div class="bg-[#493628] w-1 h-full mr-10"></div>
@@ -147,8 +148,8 @@
             </div>`
         }
       </div>`;
-
-      content.innerHTML += projectHTML;
+      if(content != null)
+        content.innerHTML += projectHTML;
     });
 
     applyIntersectionObserver();
