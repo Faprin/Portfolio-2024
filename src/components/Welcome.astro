@@ -23,7 +23,7 @@
         >¿Quién soy?</a
       >
       <a
-        href="#"
+        href="#contact"
         class="hover:scale-110 transform transition duration-200 ease-in-out"
         >Contacto</a
       >
@@ -91,40 +91,78 @@
     </div>
 
     <!-- Contenedor de proyectos -->
-     <div id="project-cont" class="flex flex-col gap-10 pt-7 transition-all duration-1000"></div>
-    
+    <div
+      id="project-cont"
+      class="flex flex-col gap-10 pt-7 transition-all duration-1000"
+    >
+    </div>
   </section>
 
   <section id="about" class="min-h-screen">
     <div class="pt-36">
-      <h3 class="font-bold text-4xl">¿Quién soy?</h3>
+      <h3 class="text-md">¿Quién soy?</h3>
+      <div class="grid grid-cols-2">
+        <div class="flex flex-col">
+          <p class="text-5xl font-bold">
+            Código, innovación y eficiencia: Construyendo el software del
+            futuro.
+          </p>
+          <p>
+            El desarrollo de software es crear soluciones que marcan la
+            diferencia. Como estudiante de Ingeniería Informática, me
+            especializo en software eficiente, seguro y escalable. Me apasiona
+            la optimización de procesos y la programación concurrente,
+            explorando nuevas tecnologías para desarrollar aplicaciones de alto
+            rendimiento. Siempre buscando innovar y mejorar la tecnología. 🚀
+          </p>
+          <button
+            class="rounded-full py-2 px-6 border-[#493628] border-2 max-w-[140px]"
+            ><a href="#contact">Contáctame</a></button
+          >
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="min-h-screen">
+    <div class="pt-36">
+      <h3 class="font-bold text-4xl">Contacto</h3>
     </div>
   </section>
 </main>
 
 <script>
-  const projectsTitle = ["N-Queens Solver", "Problema del viajante", "Simulador de colisiones"];
+  const projectsTitle = [
+    "N-Queens Solver",
+    "Problema del viajante",
+    "Simulador de colisiones",
+  ];
   const projectsDescriptions = [
     "Este proyecto resuelve el problema de las N-Reinas utilizando una interfaz gráfica construida con JavaFX. El programa permite al usuario introducir el número de filas, columnas y reinas a través de la interfaz, y genera una solución utilizando el algoritmo de backtracking.",
     "Programa en lenguaje Java con el que podamos resolver el famoso problema del viajante. Para ello, empleamos distintas estrategias algorítmicas y realizamos un estudio de cada uno de los algoritmos usados, verificando cuál resulta más eficiente y gasta menos tiempo computacional.",
     "Es un simulador de colisiones desarrollado en JavaScript. Su objetivo es proporcionar una representación visual y dinámica de cómo los objetos interactúan entre sí durante una colisión, utilizando principios básicos de física",
   ];
-  const projectsLinks = ["https://github.com/Faprin/n-Queens", "https://github.com/Faprin/Practica2_AMC", "https://github.com/Mininh1206/collision-simulator"];
+  const projectsLinks = [
+    "https://github.com/Faprin/n-Queens",
+    "https://github.com/Faprin/Practica2_AMC",
+    "https://github.com/Mininh1206/collision-simulator",
+  ];
   const projectsImages = ["/tablero.webp", "/viajante.webp", "image 3"];
   const altImg = ["tablero", "viajante", "collision"];
-  
+
   function generateProjects() {
     const content = document.getElementById("project-cont");
-    if(content != null)
-      content.innerHTML = "";
+    if (content != null) content.innerHTML = "";
 
     projectsTitle.forEach((title, index) => {
       const isEven = index % 2 === 0;
-      
+
       const projectHTML = `
       <div class="grid grid-cols-2 mx-20 opacity-0 translate-y-10 transition-all duration-700">
-        ${isEven 
-          ? `<div id="column-1" class="flex flex-col ml-auto text-end pr-10">
+        ${
+          isEven
+            ? `<div id="column-1" class="flex flex-col ml-auto text-end pr-10">
               <a href="${projectsLinks[index]}" target="_blank" rel="noopener noreferrer">
                 <h3 class="font-bold text-2xl">${title}</h3>
               </a>
@@ -134,7 +172,7 @@
               <div class="bg-[#493628] w-1 h-full mr-10"></div>
               <img class="w-full max-w-[210px] object-contain" src="${projectsImages[index]}" alt="${altImg[index]}" />
             </div>`
-          : `<div id="column-1" class="flex justify-end mr-10">
+            : `<div id="column-1" class="flex justify-end mr-10">
               <img class="w-full max-w-[210px] object-contain" src="${projectsImages[index]}" alt="${altImg[index]}" />
             </div>
             <div class="flex">
@@ -148,8 +186,7 @@
             </div>`
         }
       </div>`;
-      if(content != null)
-        content.innerHTML += projectHTML;
+      if (content != null) content.innerHTML += projectHTML;
     });
 
     applyIntersectionObserver();
@@ -164,7 +201,7 @@
           if (entry.isIntersecting) {
             setTimeout(() => {
               entry.target.classList.add("opacity-100", "translate-y-0");
-            }, index * 200); 
+            }, index * 200);
             observer.unobserve(entry.target);
           }
         });
@@ -178,7 +215,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     generateProjects();
   });
-
 
   const nombre = document.getElementById("nombre");
 
