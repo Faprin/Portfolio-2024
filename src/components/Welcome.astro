@@ -39,7 +39,7 @@
         <h3 id="nombre" class="text-6xl font-bold text-right">
           Jose Manuel<br /> Domínguez <br /> Segura
         </h3>
-        <div class="bg-[#493628] w-1 h-full"></div>
+        <div class="bg-[#493628] min-w-1 h-full"></div>
       </div>
 
       <!-- TEXTO DE BIENVENIDA -->
@@ -121,17 +121,56 @@
           >
         </div>
         <div class="">
-          <img src="/public/rabout.jpg" alt="dev" class="w-full ml-10" style="clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);" />
+          <img
+            src="/public/mifiot.png"
+            alt="Jose Manuel Domínguez Segura"
+            class="w-full ml-10 hover:scale-110 transform transition duration-200 ease-in-out"
+          />
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="min-h-screen">
-    <div class="pt-36">
-      <h3 class="font-bold text-4xl">Contacto</h3>
+  <section id="contact" class="min-h-screen pt-36">
+    <!-- Solicitud de contacto -->
+    <div class="grid grid-cols-2 gap-32">
+      <div class="flex justify-start max-w-full">
+        <img
+          src="/public/rabout.jpg"
+          alt="dev"
+          class="w-full h-96 object-cover ml-10 mt-12 hover:scale-110 transform transition duration-200 ease-in-out"
+          style="clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);"
+        />
+      </div>
+
+      <div>
+        <div class="flex flex-col gap-5 pt-7">
+          <h3 class="font-bold text-6xl">Contacto</h3>
+          <p>
+            Para cualquier consulta o colaboración, no dudes en ponerte en
+            contacto conmigo!
+          </p>
+
+          <input
+            class="bg-transparent border-[#493628] border-2 rounded-full px-6 py-3 h-12 focus:shadow-lg transition duration-200 ease-in-out"
+            type="text"
+            placeholder="Asunto"
+          />
+          <textarea
+            class="bg-transparent border-[#493628] border-2 rounded-3xl px-6 py-3 h-32 resize-none focus:shadow-lg transition duration-200 ease-in-out"
+            placeholder="Mensaje"></textarea>
+
+          <button
+            class="rounded-full px-6 py-3 h-12 border-[#493628] border-2 hover:scale-110 hover:bg-[#493628] hover:text-white transform transition duration-200 ease-in-out"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
     </div>
   </section>
+
+  <footer class=""></footer>
 </main>
 
 <script>
@@ -150,7 +189,7 @@
     "https://github.com/Faprin/Practica2_AMC",
     "https://github.com/Mininh1206/collision-simulator",
   ];
-  const projectsImages = ["/tablero.webp", "/viajante.webp", "image 3"];
+  const projectsImages = ["/tablero.webp", "/viajante.webp", "/viajante.webp"];
   const altImg = ["tablero", "viajante", "collision"];
 
   function generateProjects() {
@@ -226,7 +265,7 @@
     "Desarrollador Full Stack",
   ];
 
-  let index = 0; 
+  let index = 0;
 
   function changeName() {
     if (nombre != null) {
