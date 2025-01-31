@@ -102,7 +102,7 @@
     <div class="pt-36">
       <h3 class="text-md">¿Quién soy?</h3>
       <div class="grid grid-cols-2">
-        <div class="flex flex-col">
+        <div class="flex flex-col gap-7">
           <p class="text-5xl font-bold">
             Código, innovación y eficiencia: Construyendo el software del
             futuro.
@@ -116,11 +116,13 @@
             rendimiento. Siempre buscando innovar y mejorar la tecnología. 🚀
           </p>
           <button
-            class="rounded-full py-2 px-6 border-[#493628] border-2 max-w-[140px]"
+            class="rounded-full py-2 px-6 border-[#493628] border-2 max-w-[140px] hover:scale-110 hover:bg-[#493628] hover:text-white transform transition duration-200 ease-in-out"
             ><a href="#contact">Contáctame</a></button
           >
         </div>
-        <div></div>
+        <div class="">
+          <img src="/public/rabout.jpg" alt="dev" class="w-full ml-10" style="clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);" />
+        </div>
       </div>
     </div>
   </section>
@@ -224,7 +226,7 @@
     "Desarrollador Full Stack",
   ];
 
-  let index = 0; // Índice inicial para el array de nombres
+  let index = 0; 
 
   function changeName() {
     if (nombre != null) {
