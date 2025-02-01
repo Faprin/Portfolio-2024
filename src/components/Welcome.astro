@@ -9,22 +9,22 @@
     <div class="flex items-center gap-14">
       <a
         href="#home"
-        class="hover:scale-110 transform transition duration-200 ease-in-out"
+        class="hover:scale-110 transform transition duration-200 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
         >Inicio</a
       >
       <a
-        href="#projects"
-        class="hover:scale-110 transform transition duration-200 ease-in-out"
-        >Proyectos</a
-      >
-      <a
-        href="#about"
-        class="hover:scale-110 transform transition duration-200 ease-in-out"
+        href="#about "
+        class="hover:scale-110 transform transition duration-200 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
         >¿Quién soy?</a
       >
       <a
+        href="#projects"
+        class="hover:scale-110 transform transition duration-200 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
+        >Proyectos</a
+      >
+      <a
         href="#contact"
-        class="hover:scale-110 transform transition duration-200 ease-in-out"
+        class="hover:scale-110 transform transition duration-200 cursor-pointer ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
         >Contacto</a
       >
     </div>
@@ -79,25 +79,6 @@
     </div>
   </section>
 
-  <!-- Proyectos -->
-  <section id="projects" class="min-h-screen">
-    <!-- Titulo del apartado -->
-    <div class="text-center pt-36">
-      <h3 class="font-bold text-4xl">Proyectos</h3>
-      <p>
-        *Todos los proyectos que se exponen esta página se encuentran subidos a
-        GitHub
-      </p>
-    </div>
-
-    <!-- Contenedor de proyectos -->
-    <div
-      id="project-cont"
-      class="flex flex-col gap-10 pt-7 transition-all duration-1000"
-    >
-    </div>
-  </section>
-
   <section id="about" class="min-h-screen">
     <div class="pt-36">
       <h3 class="text-md">¿Quién soy?</h3>
@@ -124,10 +105,29 @@
           <img
             src="/mifiot.png"
             alt="Jose Manuel Domínguez Segura"
-            class="w-full ml-10 hover:scale-110 transform transition duration-200 ease-in-out"
+            class="w-full ml-10"
           />
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="projects" class="min-h-screen">
+    <!-- Titulo del apartado -->
+    <div class="text-center pt-36">
+      <h3 class="font-bold text-4xl">Proyectos</h3>
+      <p>
+        *Todos los proyectos que se exponen esta página se encuentran subidos a
+        GitHub
+      </p>
+    </div>
+
+    <!-- Contenedor de proyectos -->
+    <div
+      id="project-cont"
+      class="flex flex-col gap-10 pt-7 transition-all duration-1000"
+    >
     </div>
   </section>
 
@@ -148,7 +148,7 @@
           <h3 class="font-bold text-6xl">Contacto</h3>
           <p>
             Para cualquier consulta o colaboración, no dudes en ponerte en
-            contacto conmigo! 
+            contacto conmigo!
           </p>
           <p class="font-bold">** NO DISPONIBLE TEMPORALMENTE</p>
 
@@ -171,7 +171,7 @@
     </div>
   </section>
 
-  <footer class=""></footer>
+  <footer class="hover:scale"></footer>
 </main>
 
 <script>
@@ -205,8 +205,8 @@
         ${
           isEven
             ? `<div id="column-1" class="flex flex-col ml-auto text-end pr-10">
-              <a href="${projectsLinks[index]}" target="_blank" rel="noopener noreferrer">
-                <h3 class="font-bold text-2xl">${title}</h3>
+              <a class="" href="${projectsLinks[index]}" target="_blank" rel="noopener noreferrer">
+                <h3 class="font-bold text-2xl hover:scale-105 transform transition duration-200 ease-in-out">${title}</h3>
               </a>
               <p>${projectsDescriptions[index]}</p>
             </div>
@@ -221,7 +221,7 @@
               <div class="bg-[#493628] w-1 h-full mr-10"></div>
               <div id="column-2" class="flex flex-col text-start">
                 <a href="${projectsLinks[index]}" target="_blank" rel="noopener noreferrer">
-                  <h3 class="font-bold text-2xl">${title}</h3>
+                  <h3 class="font-bold text-2xl hover:scale-105 transform transition duration-200 ease-in-out">${title}</h3>
                 </a>  
                 <p>${projectsDescriptions[index]}</p>
               </div>
