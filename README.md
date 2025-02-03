@@ -22,7 +22,7 @@ Este portfolio no es estático, sino que se actualizará con el tiempo a medida 
 - Posible migración a otros frameworks o tecnologías más avanzadas.
 
 ## 🌎 Deploy
-Este portfolio está disponible en línea. Puedes verlo en el siguiente enlace: [Mi Portfolio](faprin.netlify.app)
+Este portfolio está disponible en línea. Puedes verlo en el siguiente enlace: [Mi Portfolio](https://faprin.netlify.app)
 
 ## 📬 Contacto
 Si tienes alguna sugerencia o simplemente quieres ponerte en contacto conmigo, puedes encontrarme en:
